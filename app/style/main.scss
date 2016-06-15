@@ -1,14 +1,32 @@
 @import '_variables.scss';
+@import '_function.scss';
+@import '_mixins.scss';
 @import '_fonts.scss';
+@import './bower_components/font-awesome/scss/font-awesome.scss';
 
 body, html {
   height: 100%;
 }
 
-body {
-  font-family: 'roboto', Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  color: $color-text;
+html {
+  font-size: $base-font-size-mobile;
+  @media (min-width: $screen-sm-min) {
+    font-size: $base-font-size-desctop;
+  }
 }
 
-@import 'common';
+body {
+  font-family: $font-roboto, Helvetica, Arial, sans-serif;
+  color: $color-text;
+  min-width: 320px;
+}
+
+@import '_reset';
+
+// Bloks
+@import 'blocks/_home';
+
+// Partials
+@import 'partials/user';
+@import 'partials/social';
+@import 'partials/auth';

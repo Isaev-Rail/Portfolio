@@ -1,8 +1,68 @@
-doctype html
-html
-  include modules/_head
-  body
-    <!--[if lt IE 7]>
-    <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
-    <![endif]-->
+extends layout/layout.jade
 
+block title
+  title Личный сайт веб разработчика
+
+block content
+  .home(style="background-image: url(images/bg_main.jpg)")
+
+    header.flip-btn
+      a.flip-btn__btn#flip-btn(href="#") Авторизоваться
+
+    main.flip-container
+      .flip#flip
+        .flip__front
+          .user
+            .user__avatar
+              img.user__img(src="images/avatar.jpg" alt="Вот он Я!))")
+            .user__name Исаев Раиль
+            .user__desc Личный сайт веб разработчика
+            .social.social--opacity
+              a.social__link(href="#")
+                svg.social__icon(width="31" height="17")
+                  use(xlink:href="/images/sprite.svg#vk")
+              a.social__link(href="#")
+                svg.social__icon(width="26" height="22")
+                  use(xlink:href="/images/sprite.svg#github")
+              a.social__link(href="#")
+                svg.social__icon(width="24" height="22")
+                  use(xlink:href="/images/sprite.svg#in")
+            nav.user-nav
+              ul.user-nav__list
+                li.user-nav__item
+                  a.user-nav__link(href="/works.html") Мои работы
+                li.user-nav__item
+                  a.user-nav__link(href="/about.html") Обо мне
+                li.user-nav__item
+                  a.user-nav__link(href="/blog.html") Блог
+
+        .flip__back
+          .auth
+            .auth__head Авторизуйтесь
+            form.auth__form
+              .auth__field
+                span.auth__ico
+                  i.fa.fa-user
+                input.auth__input(type="text" name="login" placeholder="Логин" required)
+              .auth__field
+                span.auth__ico
+                  i.fa.fa-key
+                input.auth__input(type="password" name="password" placeholder="Пароль" required)
+              .checkbox
+                input.checkbox__input(id="am-people" type="checkbox" name="am-people" required)
+                label.checkbox__label(for="am-people") Я человек
+              .auth__label Вы точно не робот?
+              .radio
+                .radio__item
+                  input.radio__input(id="yes" type="radio" name="confirm" required=)
+                  label.radio__label(for="yes") Да
+                .radio__item
+                  input.radio__input(id="no" type="radio" name="confirm" required=)
+                  label.radio__label(for="no") Не уверен
+              .auth__btns
+                a.auth__btn(href="#") На главную
+                button.auth__btn(type="submit") Войти
+
+    footer.home-footer
+      .home-footer__copyright © Исаев Раиль
+      .home-footer__info создано с любовью в LoftSchool | 2016
