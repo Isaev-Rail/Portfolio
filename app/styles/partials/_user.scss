@@ -1,0 +1,68 @@
+.user {
+  max-width: 380px;
+  height: 100%;
+  text-align: center;
+  position: relative;
+    padding: 45px 0 60px;
+  @media (min-width: $screen-sm-min) {
+    padding: 60px 0 60px;
+  }
+  &__avatar {
+    margin: 0 auto 10px;
+    text-align: center;
+  }
+  &__img {
+    width: 141px;
+    height: 141px;
+    border-radius: 50%;
+  }
+  &__name {
+    font-weight: 500;
+    font-size: rem(28px);
+    color: $color-white;
+    margin-bottom: 2px;
+  }
+  &__desc {
+    color: $color-white;
+    margin-bottom: 24px;
+  }
+}
+.user-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+  }
+  &__item {
+    background-color: $color-second;
+    float:left;
+    &:nth-child(1) {
+      width: 41%;
+    }
+    &:nth-child(2) {
+      width: 33%;
+    }
+    &:nth-child(3) {
+      width: 26%;
+    }
+    &:not(:last-child) {
+      border-right: 2px solid $color-white;
+    }
+  }
+  &__link {
+    display: inline-block;
+    width: 100%;
+    color: $color-white;
+    padding: 9px 0 14px;
+    background-color: $color-second;
+    transition: .3s;
+    &:hover {
+      background-color: $color-main;
+    }
+  }
+}

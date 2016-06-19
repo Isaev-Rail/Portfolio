@@ -14,8 +14,7 @@ global.$ = {
   gulp: require('gulp'),
   rimraf: require('rimraf'),
   browserSync: require('browser-sync').create(),
-  gp: require('gulp-load-plugins')(),
-  rsp: require('remove-svg-properties').stream
+  gp: require('gulp-load-plugins')()
 };
 
 $.path.task.forEach(function(taskPath) {
@@ -40,16 +39,16 @@ $.gulp.task('default', $.gulp.series(
   )
 ));
 
-$.gulp.task('build', $.gulp.series(
-  'clean',
-    $.gulp.parallel(
-      'sass',
-      'jade',
-      'js.foundation',
-      'js.process',
-      'copy.image',
-      'svg.sprite',
-      'css.foundation',
-      'copy.fonts'
-    )
-));
+ $.gulp.task('build', $.gulp.series(
+   'clean',
+     $.gulp.parallel(
+       'sass',
+       'jade',
+       'js.foundation',
+       'js.process',
+       'copy.image',
+       'svg.sprite',
+       'css.foundation',
+       'copy.fonts'
+     )
+ ));

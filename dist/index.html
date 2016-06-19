@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Личный сайт веб разработчика</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="images/faviconimage/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="images/faviconimage/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="images/faviconimage/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+    <link rel="icon" type="images/faviconimage/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="styles/foundation.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/foundation.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+    <!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+    <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
+    <![endif]-->
+    <div style="background-image: url(images/bg_main.jpg)" class="home">
+      <header class="flip-btn"><a id="flip-btn" href="#" class="flip-btn__btn">Авторизоваться</a></header>
+      <main class="flip-container">
+        <div id="flip" class="flip">
+          <div class="flip__front">
+            <div class="user">
+              <div class="user__avatar"><img src="images/avatar.jpg" alt="Вот он Я!))" class="user__img"></div>
+              <div class="user__name">Исаев Раиль</div>
+              <div class="user__desc">Личный сайт веб разработчика</div>
+              <div class="social social--user"><a href="#" class="social__link social__link--opacity social__link--hover-green">
+                  <svg width="31" height="17" class="social__icon social__icon--vk">
+                    <use xlink:href="images/sprite.svg#vk"></use>
+                  </svg></a><a href="#" class="social__link social__link--opacity social__link--hover-green">
+                  <svg width="26" height="22" class="social__icon social__icon--gh">
+                    <use xlink:href="images/sprite.svg#github"></use>
+                  </svg></a><a href="#" class="social__link social__link--opacity social__link--hover-green">
+                  <svg width="24" height="22" class="social__icon social__icon--in">
+                    <use xlink:href="images/sprite.svg#in"></use>
+                  </svg></a></div>
+              <nav class="user-nav">
+                <ul class="user-nav__list">
+                  <li class="user-nav__item"><a href="works.html" class="user-nav__link">Мои работы</a></li>
+                  <li class="user-nav__item"><a href="about.html" class="user-nav__link">Обо мне</a></li>
+                  <li class="user-nav__item"><a href="./blog.html" class="user-nav__link">Блог</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="flip__back">
+            <div class="auth">
+              <div class="auth__head">Авторизуйтесь</div>
+              <form class="auth__form">
+                <div class="auth__field"><span class="auth__ico"><i class="fa fa-user"></i></span>
+                  <input type="text" name="login" placeholder="Логин" required class="auth__input">
+                </div>
+                <div class="auth__field"><span class="auth__ico"><i class="fa fa-key"></i></span>
+                  <input type="password" name="password" placeholder="Пароль" required class="auth__input">
+                </div>
+                <div class="checkbox">
+                  <input id="am-people" type="checkbox" name="am-people" required class="checkbox__input">
+                  <label for="am-people" class="checkbox__label">Я человек</label>
+                </div>
+                <div class="auth__label">Вы точно не робот?</div>
+                <div class="radio">
+                  <div class="radio__item">
+                    <input id="yes" type="radio" name="confirm" required class="radio__input">
+                    <label for="yes" class="radio__label">Да</label>
+                  </div>
+                  <div class="radio__item">
+                    <input id="no" type="radio" name="confirm" required class="radio__input">
+                    <label for="no" class="radio__label">Не уверен</label>
+                  </div>
+                </div>
+                <div class="auth__btns"><a href="#" class="auth__btn">На главную</a>
+                  <button type="submit" class="auth__btn">Войти</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="home-footer">
+        <div class="home-footer__copyright">© Исаев Раиль</div>
+        <div class="home-footer__info">создано с любовью в LoftSchool | 2016</div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+  $(window).on('load resize',function () {
+    var ww = $(window).width();
+    console.log(ww);    
+  })
+
   $('#flip-btn').on('click', function() {
     var btn = $(this);
     btn.addClass('hidden');
@@ -13,6 +18,16 @@ $(document).ready(function() {
     return false
   });
     
+  $('#toggle-nav').on('click', function () {
+    $(this).toggleClass('on');
+    return false
+  })
 
+  $(window).on('load resize', function() {
+    var trianglesHeight = $('#triangles').height();
+    $('#main-content').css({
+      'margin-top' : -trianglesHeight
+    });
+  })
 
 });

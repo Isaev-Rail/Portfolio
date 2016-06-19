@@ -1,0 +1,26 @@
+$img: '../images/';
+
+$font-roboto: 'roboto';
+$font-sansus: 'sansus_webissimo';
+
+$base-font-size: 16px;
+
+$base-font-size-desctop: $base-font-size;
+$base-font-size-laptop: $base-font-size-desctop - 1;
+$base-font-size-tablet: $base-font-size-laptop - 1;
+$base-font-size-mobile: $base-font-size-tablet - 1;
+
+$color-text: #000;
+$color-main: #4e8839;
+$color-second: #6c9c5a;
+$color-white: #fff;
+
+$screen-xs: 480px;
+$screen-xs-max: 767px;
+$screen-sm-min: 768px;
+$screen-sm-max: 991px;
+$screen-md-min: 992px;
+$screen-md-max: 1199px;
+$screen-lg-min: 1200px;
+$screen-lg-max: 1439px;
+$screen-big: 1440px;

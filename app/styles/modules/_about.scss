@@ -1,0 +1,140 @@
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  &__left, &__right {
+    display: inline-flex;
+    align-items: flex-start;
+    @include tablet-max {
+      flex-basis: 100%;
+    }
+    @include laptop-min {
+      flex-basis: 50%;
+    }
+  }
+  &__left {
+    background-color: #ebefe2;
+    @include laptop-max {
+      flex-wrap: wrap;
+    }
+  }
+  &__right {
+    background-color: #f4f5f0;
+    @include tablet-max {
+      justify-content: center;
+    }
+  }
+  &__heading, &__content {
+    display: inline-flex;
+    flex-basis: 100%;
+    @include desctop-min {
+      flex-basis: 50%;
+    }
+  }
+  &_heading {
+    padding: 0 rem(20px);
+    @include laptop-min {
+      margin-top: rem(-15px);
+    }
+  }
+  &__content {
+    flex-wrap: wrap;
+    max-width: rem(520px);
+    margin: 0 auto;
+    padding: 0 rem(20px) rem(30px);
+    @include laptop-min {
+      max-width: rem(480px);
+      padding: rem(20px);
+    }
+  }
+  &__photo {
+    margin-bottom: rem(20px);
+  }
+  &__img {
+    display: block;
+    max-width: 100%;
+  }
+}
+.tehn {
+  padding: 0 rem(20px) rem(30px);
+  @include tablet-max {
+    text-align: center;
+    padding: rem(35px) rem(20px) rem(30px);
+  }
+  @include desctop {
+    padding: rem(1px) rem(30px) rem(30px);
+  }
+  @include big-screen {
+    padding: rem(10px) rem(35px) rem(30px);
+  }
+  &__wrap {
+    margin-top: rem(15px);
+    @include tablet-min {
+      margin-top: rem(45px);
+    }
+  }
+  &__title {
+    font-weight: 500;
+    font-size: rem(28px);
+    color: #566358;
+    margin-bottom: rem(15px);
+  }
+  &__inner {
+    @include tablet-min {
+      margin-bottom: rem(25px);
+    }
+  }
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 110px;
+    position: relative;
+    @include tablet-max {
+      margin: 0 rem(15px) rem(20px);
+    }
+    @include big-screen {
+      width: rem(120px);
+    }
+    &:not(:last-child) {
+      @include laptop {
+        margin-right: 5px;
+      }
+      @include desctop {
+        margin-right: 25px;
+      }
+      @include big-screen {
+        margin-right: 40px;
+      }
+    }
+  }
+  &__svg {
+    width: 100%;
+    height: 100%;
+  }
+  &__circle {
+    fill: transparent;
+    stroke: #dfdcd5;
+    stroke-width: rem(20px);
+    transform: rotate(-90deg);
+    transform-origin: center center;
+  }
+  &__indicator {
+    fill: transparent;
+    stroke: $color-second;
+    stroke-width: rem(20px);
+    transform: rotate(-90deg);
+    transform-origin: center center;
+    transition: stroke-dasharray 1s ease;
+  }
+  &__name {
+    font-weight: 500;
+    font-size: rem(14px);
+    color: $color-main;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

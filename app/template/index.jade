@@ -1,4 +1,4 @@
-extends layout/layout.jade
+extends common/head
 
 block title
   title Личный сайт веб разработчика
@@ -17,24 +17,24 @@ block content
               img.user__img(src="images/avatar.jpg" alt="Вот он Я!))")
             .user__name Исаев Раиль
             .user__desc Личный сайт веб разработчика
-            .social.social--opacity
-              a.social__link(href="#")
-                svg.social__icon(width="31" height="17")
-                  use(xlink:href="/images/sprite.svg#vk")
-              a.social__link(href="#")
-                svg.social__icon(width="26" height="22")
-                  use(xlink:href="/images/sprite.svg#github")
-              a.social__link(href="#")
-                svg.social__icon(width="24" height="22")
-                  use(xlink:href="/images/sprite.svg#in")
+            .social.social--user
+              a.social__link.social__link--opacity.social__link--hover-green(href="#")
+                svg.social__icon.social__icon--vk(width="31" height="17")
+                  use(xlink:href="images/sprite.svg#vk")
+              a.social__link.social__link--opacity.social__link--hover-green(href="#")
+                svg.social__icon.social__icon--gh(width="26" height="22")
+                  use(xlink:href="images/sprite.svg#github")
+              a.social__link.social__link--opacity.social__link--hover-green(href="#")
+                svg.social__icon.social__icon--in(width="24" height="22")
+                  use(xlink:href="images/sprite.svg#in")
             nav.user-nav
               ul.user-nav__list
                 li.user-nav__item
-                  a.user-nav__link(href="/works.html") Мои работы
+                  a.user-nav__link(href="works.html") Мои работы
                 li.user-nav__item
-                  a.user-nav__link(href="/about.html") Обо мне
+                  a.user-nav__link(href="about.html") Обо мне
                 li.user-nav__item
-                  a.user-nav__link(href="/blog.html") Блог
+                  a.user-nav__link(href="./blog.html") Блог
 
         .flip__back
           .auth

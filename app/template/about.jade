@@ -1,4 +1,123 @@
-extends layout/layout.jade
+extends common/head.jade
 
 block title
   title О разработчике
+
+block content
+  header.header(style="background-image: url(images/bg_main.jpg)")
+    .header__top
+      .social
+        a.social__link(href="#")
+          svg.social__icon.social__icon--vk
+            use(xlink:href="images/sprite.svg#vk")
+        a.social__link(href="#")
+          svg.social__icon.social__icon--gh
+            use(xlink:href="images/sprite.svg#github")
+        a.social__link(href="#")
+          svg.social__icon.social__icon--in
+            use(xlink:href="images/sprite.svg#in")
+      a.toggle-nav#toggle-nav(href="#")
+        span.toggle-nav__inner
+    .header__content
+      .header__avatar
+        img.header__img(src="images/avatar.jpg" alt="Вот он Я!))")
+      .header__name Исаев Раиль
+      .header__desc Личный сайт веб разработчика
+    .header__bottom
+      a.header-arrow#arrow-down(href="#content")
+        svg.header-arrow__svg
+          use(xlink:href="images/sprite.svg#arrow_down")
+    .header__label.header__label--portfolio
+      svg.header__svg
+        use(xlink:href="images/sprite.svg#portfolio_header")
+  main.main-content#main-content
+    //.triangles
+    svg.triangles#triangles(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="xMinYMax slice")
+      polygon.triangles__darken(points="0,0   0,86   500.8,86   500.8,80")
+      polygon.triangles__lighten(points="1000,0   1000,86   500,86   500,80")
+    .about
+      .about__left
+        .about__heading
+          .sect-head
+            h2.sect-head__title Обо мне
+            .sect-head__background
+              svg.sect-head__svg(width="357" height="125")
+                use(xlink:href="images/sprite.svg#about_header")
+        .about__content
+          .about__photo
+            img.about__img(src="images/avatar.jpg" alt="Вот он я! ))")
+          h3.block-head кто я
+          .about__desc
+              p.paragraph.
+                Я веб разработчик из Москвы. Мне 24 года.
+                <br> Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+              p.paragraph Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+      .about__right
+        .tehn
+          h3.block-head Чем я могу быть <br>  вам полезен
+          p.paragraph.paragraph--tehn Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку.
+          .tehn__wrap
+            .tehn__row
+              h4.tehn__title Frontend
+              .tehn__inner
+                .tehn__item
+                  svg.tehn__svg( viewBox="0 0 120 120")
+                    circle.tehn__circle(r="50" cx="50%" cy="50%")
+                    circle.tehn__indicator(r="50" cx="50%" cy="50%" stroke-dasharray="282 314" opacity="0.9")
+                  span.tehn__name HTML5
+                .tehn__item
+                  svg.tehn__svg( viewBox="0 0 120 120")
+                    circle.tehn__circle(r="50" cx="50%" cy="50%")
+                    circle.tehn__indicator(r="50" cx="50%" cy="50%" stroke-dasharray="270 314" opacity="0.9")
+                  span.tehn__name CSS3
+                .tehn__item
+                  svg.tehn__svg( viewBox="0 0 120 120")
+                    circle.tehn__circle(r="50" cx="50%" cy="50%")
+                    circle.tehn__indicator(r="50" cx="50%" cy="50%" stroke-dasharray="150 314" opacity="0.9")
+                  span.tehn__name JavaScript & jQuery
+            .tehn__row
+              h4.tehn__title Backend
+              .tehn__inner
+                .tehn__item
+                  svg.tehn__svg( viewBox="0 0 120 120")
+                    circle.tehn__circle(r="50" cx="50%" cy="50%")
+                    circle.tehn__indicator(r="50" cx="50%" cy="50%" stroke-dasharray="125 314" opacity="0.4")
+                  span.tehn__name PHP
+                .tehn__item
+                  svg.tehn__svg( viewBox="0 0 120 120")
+                    circle.tehn__circle(r="50" cx="50%" cy="50%")
+                    circle.tehn__indicator(r="50" cx="50%" cy="50%" stroke-dasharray="160 314" opacity="0.5")
+                  span.tehn__name mySQL
+                .tehn__item
+                  svg.tehn__svg( viewBox="0 0 120 120")
+                    circle.tehn__circle(r="50" cx="50%" cy="50%")
+                    circle.tehn__indicator(r="50" cx="50%" cy="50%" stroke-dasharray="180 314" opacity="0.6")
+                  span.tehn__name Node.js & npm
+                .tehn__item
+                  svg.tehn__svg( viewBox="0 0 120 120")
+                    circle.tehn__circle(r="50" cx="50%" cy="50%")
+                    circle.tehn__indicator(r="50" cx="50%" cy="50%" stroke-dasharray="80 314" opacity="0.4")
+                  span.tehn__name Mongo.db
+            .tehn__row
+              h4.tehn__title WorkFlow
+              .tehn__inner
+                .tehn__item
+                  svg.tehn__svg( viewBox="0 0 120 120")
+                    circle.tehn__circle(r="50" cx="50%" cy="50%")
+                    circle.tehn__indicator(r="50" cx="50%" cy="50%" stroke-dasharray="280 314" opacity="0.9")
+                  span.tehn__name Git
+                .tehn__item
+                  svg.tehn__svg( viewBox="0 0 120 120")
+                    circle.tehn__circle(r="50" cx="50%" cy="50%")
+                    circle.tehn__indicator(r="50" cx="50%" cy="50%" stroke-dasharray="270 314" opacity="0.85")
+                  span.tehn__name Gulp
+                .tehn__item
+                  svg.tehn__svg( viewBox="0 0 120 120")
+                    circle.tehn__circle(r="50" cx="50%" cy="50%")
+                    circle.tehn__indicator(r="50" cx="50%" cy="50%" stroke-dasharray="260 314" opacity="0.8")
+                  span.tehn__name Bower
+  include modules/footer.jade
+
+
+
+

@@ -1,0 +1,38 @@
+.clearfix {
+  &:before, &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+body, html {
+  height: 100%;
+}
+
+html {
+  @include mobile {
+    font-size: $base-font-size-mobile;
+  }
+  @include tablet {
+    font-size: $base-font-size-tablet;
+  }
+  @include laptop {
+    font-size: $base-font-size-laptop;
+  }
+  @include desctop {
+    font-size: $base-font-size-desctop;
+  }
+}
+body {
+  font-family: $font-roboto, Helvetica, Arial, sans-serif;
+  color: $color-text;
+  min-width: 320px;
+}
+
+.main-content {
+  min-height: 500px;
+}
+

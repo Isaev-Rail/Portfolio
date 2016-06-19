@@ -1,0 +1,139 @@
+.footer {
+
+  &_absolute {
+
+  }
+}
+.footer {
+  
+  &__content {
+    background-color: rgba(#373e42, .85);
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include tablet-min {
+      padding: rem(30px) 0;
+    }
+  }
+  &__item {
+    display: inline-flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    padding: 0 rem(30px);
+    @include tablet {
+      flex-basis: 50%;
+    }
+    @include laptop-min {
+      flex-basis: 33.333%;
+    }
+    @include laptop {
+      padding: 0 rem(15px);
+    }
+    &:not(:last-child) {
+      @include laptop-min {
+        border-right: 1px solid rgba($color-white, .2);
+      }
+      @include mobile {
+        border-bottom: 1px solid rgba($color-white, .2);
+        padding: 20px;
+        justify-content: center;
+      }
+    }
+    @include mobile {
+      padding: 20px;
+    }
+    &:first-child {
+      @include tablet {
+        border-right: 1px solid rgba($color-white, .2);
+      }
+    }
+    &--quote {
+      @include tablet {
+        flex-basis: 100%;
+        margin-top: rem(25px);
+      }
+    }
+  }
+  &__text {
+    max-width: 360px;
+    font-weight: 100;
+    font-size: rem(16px);
+    color: $color-white;
+    line-height: 1.5;
+    @include mobile {
+      text-align: center;
+    }
+  }
+  &__quote {
+    margin: 0;
+    color: rgba($color-white, .5);
+    font-size: rem(16px);
+    font-style: italic;
+    line-height: 1.625;
+    @include mobile {
+      text-align: center;
+    }
+  }
+  &__quote-text {
+    font-weight: 100;
+  }
+  &__quote-name {
+    font-weight: 500;
+  }
+  &__bottom {
+    font-weight: 100;
+    color: $color-white;
+    text-align: center;
+    font-size: rem(16px);
+    background-color: rgba($color-second, .85);
+    line-height: 1.2;
+    padding: rem(9px) 0 rem(10px);
+  }
+  &__copyright {
+    &:after {
+      @include tablet-min {
+        content: ' | ';
+      }
+    }
+    @include mobile {
+      display: block;
+    }
+  }
+}
+.footer-nav {
+  margin-bottom: rem(25px);
+  width: 100%;
+  white-space: nowrap;
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @include desctop-max {
+      display: flex;
+      justify-content: space-between;
+    }
+    @include mobile {
+      justify-content: center;
+    }
+  }
+  &__item {
+    display: inline-block;
+    &:not(:last-child) {
+      @include big-screen {
+        margin-right: 40px;
+      }
+      @include mobile {
+        margin-right: 10px;
+      }
+    }
+  }
+  &__link {
+    font-weight: 500;
+    font-size: rem(16px);
+    color: #fff;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
