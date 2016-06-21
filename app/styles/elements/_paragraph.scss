@@ -1,0 +1,14 @@
+.paragraph {
+  p {
+    font-size: rem(16px);
+    color: #566358;
+    line-height: 1.5;
+    margin-bottom: rem(15px);
+  }
+  &--tehn p {
+    @include tablet-max {
+      max-width: rem(540px);
+      margin: 0 auto;
+    }
+  }
+}

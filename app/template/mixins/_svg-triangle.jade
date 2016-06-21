@@ -1,0 +1,4 @@
+mixin triangles(triangle_left, triangle_right)
+  svg.triangles#triangles(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="xMinYMax slice")
+    polygon(class="#{triangle_left}" points="0,0   0,86   500.8,86   500.8,80")
+    polygon(class="#{triangle_right}" points="1000,0   1000,86   500,86   500,80")

@@ -1,0 +1,22 @@
+.block-head {
+  width: 100%;
+  text-align: center;
+  font-family: $font-sansus;
+  font-weight: normal;
+  font-size: rem(36px);
+  color: #566358;
+  line-height: 1;
+  padding-bottom: rem(25px);
+  margin-bottom: rem(25px);
+  position: relative;
+  &:after {
+    content: '';
+    width: rem(90px);
+    height:rem(3px);
+    background-color: #566358;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: rem(-45px);
+  }
+}

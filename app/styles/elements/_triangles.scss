@@ -1,0 +1,13 @@
+.triangles {
+  margin-bottom: -5px;
+  fill: #faf8f0;
+  &__darken {
+    fill: #ebefe2;
+  }
+  &__lighten {
+    fill: #ebefe2;
+    @include laptop-min {
+      fill: #f4f5f0;
+    }
+  }
+}

@@ -9,7 +9,7 @@ var svg_config = {
         scss: {
           dest:'../../../app/styles/_sprite.scss'
         }
-      }
+      },
       // example : true
     }
   }

@@ -1,11 +1,7 @@
-.footer {
 
-  &_absolute {
-
-  }
-}
 .footer {
-  
+  position: relative;
+  z-index: 100;
   &__content {
     background-color: rgba(#373e42, .85);
     padding: 0 10px;

@@ -9,11 +9,13 @@ global.$ = {
     jsFoundation: require('./gulp/paths/js.foundation.js'),
     cssFoundation: require('./gulp/paths/css.foundation.js'),
     fonts: require('./gulp/paths/fonts.js'),
-    app: require('./gulp/paths/app.js')
+    app: require('./gulp/paths/app.js'),
+    data: require('./gulp/paths/data.js'),
   },
   gulp: require('gulp'),
   rimraf: require('rimraf'),
   browserSync: require('browser-sync').create(),
+  fs: require('fs'),
   gp: require('gulp-load-plugins')()
 };
 

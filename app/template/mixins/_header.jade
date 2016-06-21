@@ -1,0 +1,18 @@
+mixin header(name, arrow, label)
+  header.header(style="background-image: url(images/bg_main.jpg)")
+    .header__top
+
+      a.toggle-nav#toggle-nav(href="#")
+        span.toggle-nav__inner
+    .header__content
+      .header__avatar
+        img.header__img(src="images/avatar.jpg" alt="Вот он Я!))")
+      .header__name Исаев Раиль
+      .header__desc Личный сайт веб разработчика
+    .header__bottom
+      a.header-arrow#arrow-down(href="#content")
+        svg.header-arrow__svg
+          use(xlink:href="images/sprite.svg#arrow_down")
+    .header__label.header__label--portfolio
+      svg.header__svg
+        use(xlink:href="images/sprite.svg#portfolio_header")

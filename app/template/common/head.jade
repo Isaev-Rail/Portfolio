@@ -1,3 +1,5 @@
+include ../mixins/index-mixins
+
 doctype html
 html
   head
@@ -39,6 +41,7 @@ html
 
     //- scripts start
     script(src='scripts/foundation.js' defer)
+    //script(src='https://maps.googleapis.com/maps/api/js?sensor=false' defer)
     script(src='scripts/main.js' defer)
     //- scripts end
 
@@ -52,4 +55,4 @@ html
     <![endif]-->
 
     block content
-      .wrapper какой то контент
+      .wrapper Тут пишем контент

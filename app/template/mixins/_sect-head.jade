@@ -1,0 +1,6 @@
+mixin sect-head(title, svg_name, width, height, classModificator)
+  .sect-head(class='sect-head' + classModificator)
+    h2.sect-head__title= title
+    .sect-head__background
+      svg.sect-head__svg(width=width height=height)
+        use(xlink:href="images/sprite.svg##{svg_name}")
