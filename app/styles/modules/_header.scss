@@ -42,6 +42,8 @@
   &__desc {
     color: $color-white;
     margin-bottom: 24px;
+    position: relative;
+    z-index: 1;
   }
   &__bottom {
     position: relative;

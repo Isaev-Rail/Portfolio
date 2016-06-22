@@ -3,6 +3,7 @@ extends common/head
 block title
   .menu#menu
     +navigation('menu', navigation, 'Мои работы')
+block content
   header.header(style="background-image: url(images/bg_main.jpg)")
     .header__top
       +social
@@ -20,7 +21,63 @@ block title
     .header__label.header__label--portfolio
       svg.header__svg
         use(xlink:href="images/sprite.svg#portfolio_header")
+
   main.main-content#main-content
     +triangles
-  +footer
+    +sect-head('Мои работы', 'works_header', 506, 165)
+    .slider
+      .slider__left
+        .slider__display
+          img.slider__img(src="/images/slider/1.png" alt="Первый сайт")
+        .slider__info
+          h4.slider__title Сайт школы<br>онлайн образования
+          .slider__tehn HTML , CSS, JAVASCRIPT
+          .slider__btn
+            a.btn(href="#")
+              svg.btn__svg(width="19" height="19")
+                use(xlink:href="images/sprite.svg#link")
+              span.btn__text Посмотреть сайт
+      .slider__right
+        .slider__controls
+          a.slider__control.slider__control--prev(href="#")
+            img(src="/images/slider/4.png" alt="Предыдущий")
+          a.slider__control.slider__control--next(href="#")
+            img(src="/images/slider/2.png" alt="Следующий")
+    .testim(style="background-image: url(images/bg_testimonials.jpg)")
+      +sect-head("Что обо мне <br> говорят", 'about_header', 499, 176)
+      .testim__wrapper
+        .testimonials
+          .testimonials__photo
+            img(src="images/testimonials/1.jpg" alt="Ковальчук Дмитрий")
+          .testimonials__text
+            .testimonials__desc Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+            .testimonials__name Ковальчук Дмитрий
+            .testimonials__defi — основатель Loftschool
+        .testimonials
+          .testimonials__photo
+            img(src="images/testimonials/2.jpg" alt="Зар Захаров")
+          .testimonials__text
+            .testimonials__desc Этот код выдержет любые испытания.<br>Только пожалуйста, не загружается сайт на слишком старых браузерах!
+            .testimonials__name Зар Захаров
+            .testimonials__defi — главный преподаватель
+
+      .callback
+        h3.block-head.block-head--upp Связаться со мной
+        form.callback__form
+          .callback__row
+            input.callback__field(type="text" name="name" placeholder="Имя" required)
+          .callback__row
+            input.callback__field(type="email" name="email" placeholder="Email" required)
+          .callback__row
+            textarea.callback__message(name="message" placeholder="Ваше сообщение")
+          .callback__btns
+            button.callback__btn(type="submit") Отправить
+            button.callback__btn(type="reset") Очистить
+
+      .arrow-up
+        a.arrow-up__link(href="#")
+          svg.arrow-up__svg
+            use(xlink:href="images/sprite.svg#arrow_down")
+
+  +footer('footer-overlay')
 

@@ -1,0 +1,23 @@
+.btn {
+  display: inline-block;
+  padding: rem(9px) rem(20px) rem(11px);
+  background-color: $color-second;
+  border-radius: 50px;
+  transition: .2s;
+  &:hover {
+    background-color: darken($color-second, 7%);
+  }
+  &__svg {
+    display: inline-block;
+    vertical-align: middle;
+    fill: $color-white;
+    margin-right: 10px;
+  }
+  &__text {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: rem(16px);
+    color: $color-white;
+    line-height: 1.2;
+  }
+}

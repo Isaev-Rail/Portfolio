@@ -1,0 +1,18 @@
+.arrow-up {
+  text-align: center;
+  &__link {
+    display: inline-block;
+    padding: rem(15px);
+    opacity: .7;
+    transition: .2s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &__svg {
+    width: rem(26px);
+    height: rem(16px);
+    transform: rotate(180deg);
+    fill: $color-white;
+  }
+}

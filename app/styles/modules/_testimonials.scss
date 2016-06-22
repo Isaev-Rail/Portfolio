@@ -1,0 +1,64 @@
+.testim {
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: rem(30px) 0 rem(470px);
+  @include tablet-min {
+    padding: rem(30px) 0 rem(270px);
+    background-size: cover;
+  }
+  &__wrapper {
+    padding: rem(25px) 0 rem(30px);
+    text-align: center;
+  }
+}
+.testimonials {
+  max-width: rem(390px);
+  margin: 0 auto rem(35px);
+  @include tablet-min {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 rem(10px) rem(35px);
+  }
+  &__photo {
+    width: rem(77px);
+    height: rem(77px);
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  &__text {
+    padding-top: rem(20px);
+    position: relative;
+    &:before {
+      content: '';
+      width: rem(75px);
+      height: rem(61px);
+      background: url(../images/quotes.png) center no-repeat;
+      background-size: 100% 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: .2;
+    }
+  }
+  &__desc {
+    font-size: rem(16px);
+    font-style: italic;
+    color: #5d5a55;
+    margin-bottom: rem(15px);
+    text-align: left;
+  }
+  &__name {
+    font-weight: 500;
+    font-size: rem(16px);
+    font-style: italic;
+    color: $color-main;
+    margin-bottom: rem(5px);
+  }
+  &__defi {
+    font-size: rem(16px);
+    font-style: italic;
+    color: #373e42;
+  }
+
+}

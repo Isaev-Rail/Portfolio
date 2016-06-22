@@ -9,6 +9,9 @@
   padding-bottom: rem(25px);
   margin-bottom: rem(25px);
   position: relative;
+  &--upp {
+    text-transform: uppercase;
+  }
   &:after {
     content: '';
     width: rem(90px);

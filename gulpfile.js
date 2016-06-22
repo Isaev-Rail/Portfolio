@@ -10,7 +10,7 @@ global.$ = {
     cssFoundation: require('./gulp/paths/css.foundation.js'),
     fonts: require('./gulp/paths/fonts.js'),
     app: require('./gulp/paths/app.js'),
-    data: require('./gulp/paths/data.js'),
+    data: require('./gulp/paths/data.js')
   },
   gulp: require('gulp'),
   rimraf: require('rimraf'),

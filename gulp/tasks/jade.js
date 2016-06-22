@@ -9,6 +9,8 @@ module.exports = function() {
         locals: JSON.parse($.fs.readFileSync(YOUR_LOCALS, 'utf-8')),
         pretty: '\t'
       }))
+      .pipe($.gp.replace('&lt;', '<'))
+      .pipe($.gp.replace('&gt;', '>'))
       .on('error', $.gp.notify.onError(function(error) {
         console.log(123);
         return {

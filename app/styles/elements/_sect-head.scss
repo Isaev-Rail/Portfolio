@@ -18,8 +18,10 @@
     font-size: rem(63px);
     color: #373e42;
     text-align: center;
-    padding-bottom: rem(20px);
+    padding: rem(20px) 0;
     position: relative;
+    z-index: 1;
+
     &:after {
       content: '';
       width: rem(90px);
@@ -32,13 +34,11 @@
     }
   }
   &__background {
-    max-width: rem(360px);
     width: 100%;
     height: 100%;
     position: absolute;
     left: 50%;
     top: rem(-30px);
-    z-index: -1;
     transform: translateX(-50%);
     opacity: .1;
     @include mobile {
